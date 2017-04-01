@@ -1,0 +1,821 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="欢迎来到”分析观”, 一个交流运筹分析(Analytics)知识的平台。
+Analytics是一个新兴领域，甚至还没有一个贴切的中文翻译，我暂且称它为“运筹分析”。但提起她的内涵却并不会让人感到陌生。概括说来，它是运用商业分析+数据科学+数学建模+数据可视化为企业提供决策支持。解决的核心问题就一句话：
+
+怎么做正确的商业决策？
+
+毫不夸张的说，及早在Analytics领域进行战略布局，已经成为未来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分析观上线! 开篇聊聊什么是Analytics">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/分析观上线了/index.html">
+<meta property="og:site_name" content="分析观">
+<meta property="og:description" content="欢迎来到”分析观”, 一个交流运筹分析(Analytics)知识的平台。
+Analytics是一个新兴领域，甚至还没有一个贴切的中文翻译，我暂且称它为“运筹分析”。但提起她的内涵却并不会让人感到陌生。概括说来，它是运用商业分析+数据科学+数学建模+数据可视化为企业提供决策支持。解决的核心问题就一句话：
+
+怎么做正确的商业决策？
+
+毫不夸张的说，及早在Analytics领域进行战略布局，已经成为未来">
+<meta property="og:image" content="https://c1.staticflickr.com/3/2558/32326416483_f5fc152042_b.jpg">
+<meta property="og:image" content="https://c1.staticflickr.com/4/3864/32779657950_b8610e9e2d_h.jpg">
+<meta property="og:updated_time" content="2017-02-28T06:40:25.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分析观上线! 开篇聊聊什么是Analytics">
+<meta name="twitter:description" content="欢迎来到”分析观”, 一个交流运筹分析(Analytics)知识的平台。
+Analytics是一个新兴领域，甚至还没有一个贴切的中文翻译，我暂且称它为“运筹分析”。但提起她的内涵却并不会让人感到陌生。概括说来，它是运用商业分析+数据科学+数学建模+数据可视化为企业提供决策支持。解决的核心问题就一句话：
+
+怎么做正确的商业决策？
+
+毫不夸张的说，及早在Analytics领域进行战略布局，已经成为未来">
+<meta name="twitter:image" content="https://c1.staticflickr.com/3/2558/32326416483_f5fc152042_b.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/23/分析观上线了/"/>
+
+
+
+
+
+  <title> 分析观上线! 开篇聊聊什么是Analytics | 分析观 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92717929-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">分析观</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">分享数据科学与运筹分析的点滴知识</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/23/分析观上线了/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="分析观">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="分析观">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                分析观上线! 开篇聊聊什么是Analytics
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-23T01:27:42-05:00">
+                2017-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/23/分析观上线了/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/23/分析观上线了/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>欢迎来到”分析观”, 一个交流运筹分析(Analytics)知识的平台。</p>
+<p>Analytics是一个新兴领域，甚至还没有一个贴切的中文翻译，我暂且称它为“运筹分析”。但提起她的内涵却并不会让人感到陌生。概括说来，它是运用<strong>商业分析</strong>+<strong>数据科学</strong>+<strong>数学建模</strong>+<strong>数据可视化</strong>为企业提供决策支持。解决的核心问题就一句话：</p>
+<blockquote>
+<p>怎么做正确的商业决策？</p>
+</blockquote>
+<p>毫不夸张的说，及早在Analytics领域进行战略布局，已经成为未来企业的核心竞争力。未来十年，胜负将决于此间！<br>作为开门第一篇文章，和大家聊聊Analytics的前世今生，应该是再合适不过了。</p>
+<a id="more"></a>
+<h2 id="什么是Analytics？"><a href="#什么是Analytics？" class="headerlink" title="什么是Analytics？"></a>什么是Analytics？</h2><blockquote>
+<p>运筹分析已经成为企业竞争力的重要源泉– <a href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Deloitte-Analytics/dttl-analytics-analytics-advantage-report-061913.pdf" target="_blank" rel="external">德勤调查报告</a></p>
+</blockquote>
+<p>Analytics的核心是使用数学模型和统计工具来分析大规模商业数据，从看似纷繁杂乱的表象中提炼出有价值的信息，从而做出高质量的决策。许多人说当下是一个信息爆炸的年代，而我更倾向于把“信息爆炸”替换为“数据爆炸”。200个电视台，400个QQ好友，100个微信好友，30个亲密的同事，30多个亲戚成员，上班的邮件，下班的闲聊，蹲坑时候看的朋友圈……，每天我们会被多少数据包围？然而这么多数据能包含多少有意义的信息？ 又有多少有信息帮助了我们的决策？如果我们不用宝贵的时间梳理它们，那么它们就根本没有意义！</p>
+<blockquote>
+<p>数据不都是信息，信息不必然是知识，知识不一定能理解，理解未必形成智慧。 – 美国宇航员 克利福德·斯托尔 博士（Dr. Clifford Stoll）</p>
+</blockquote>
+<p>看到这里，你还记得上周的朋友圈吗？还记得上次妈妈饭后唠叨了些什么吗？ 这些宛如碎屑般的数据，在你我意识中一闪而过，之后大部分便永远消失在无边无涯的潜意识大海之中。<br>小到如一人，大如一个企业，每天都在和数据搏斗。企业的IT系统，每天产生大量的数据，记录着每一个运作的细节，几乎到了保罗万有的地步。面对这浩如烟海的细节，却反而令我们无从下手了。于是我们计算各种指标，把企业的行为精简到了极致，报告来帮助管理者驾驭这头巨兽。但在精简过程中，必然会损失许多细节，抓大，自然就会放小。那有没有一种方法，能更有效的利用这些看似无用，实则隐藏了信息的细节呢？ 这就是Analytics要解决的问题。</p>
+<p>要回答Analytics是什么，先搞清楚它不是什么</p>
+<h3 id="Analytics-v-s-商业分析-Business-Analysis"><a href="#Analytics-v-s-商业分析-Business-Analysis" class="headerlink" title="Analytics v.s. 商业分析(Business Analysis)"></a>Analytics v.s. 商业分析(Business Analysis)</h3><p>很多人会问，我们有部门做战略分析啊，有做商业分析呀，和Analytics有什么区别呢？ 区别可大了。商业分析是通过对企业运营，业务，市场等进行定性分析，提出商业问题的解决方案。在目的上，和Analytics有很大的相似性,乍看上去似乎是差不多。但仔细了解一下，Business Analytics和Business Analysis的差别，那简直就是雷锋和雷峰塔的差别。</p>
+<p>首先商业分析侧重于定性，通过分析简单的业务指标来做出判断。商业分析有一套相对固定的分析工具， 比如<a href="http://wiki.mbalib.com/wiki/PESTEL%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B" target="_blank" rel="external">PESTEL模型</a>用6种因素解释宏观环境；<a href="http://wiki.mbalib.com/wiki/%E6%B3%A2%E7%89%B9%E4%BA%94%E5%8A%9B%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B" target="_blank" rel="external">波特五力</a>用5种动力来描述市场环境；<a href="http://wiki.mbalib.com/wiki/SWOT" target="_blank" rel="external">SWOT</a>则将对比竞争概括为4个维度，等等。</p>
+<p>而Analytics则是使用完全不同的方法论来帮助决策。例如对于有历史数据的业务，使用机器学习来挖掘大量数据下潜藏的规律；对于复杂的动态市场行为，会考虑用仿真实验来模拟行为的演化；对于选址、定价、广告、生产等问题，则可用优化算法求取最优方案。</p>
+<p>下面的表格可以做一个粗略的概括：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">区别</th>
+<th style="text-align:center">Business Analysis</th>
+<th style="text-align:center">Analytics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">分析方法</td>
+<td style="text-align:center">定性分析</td>
+<td style="text-align:center">定量分析</td>
+</tr>
+<tr>
+<td style="text-align:center">解决方案</td>
+<td style="text-align:center">宏观路线</td>
+<td style="text-align:center">决策优化</td>
+</tr>
+<tr>
+<td style="text-align:center">理论基础</td>
+<td style="text-align:center">传统商科，金融，财务</td>
+<td style="text-align:center">运筹学，统计学，数学</td>
+</tr>
+<tr>
+<td style="text-align:center">分析工具</td>
+<td style="text-align:center">PESTEL, MOST, STEER,…</td>
+<td style="text-align:center">统计推断，机器学习，仿真，优化算法，…</td>
+</tr>
+<tr>
+<td style="text-align:center">数据来源</td>
+<td style="text-align:center">报表</td>
+<td style="text-align:center">原始数据</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Analytics-v-s-数据分析-Data-Analysis"><a href="#Analytics-v-s-数据分析-Data-Analysis" class="headerlink" title="Analytics v.s. 数据分析(Data Analysis)"></a>Analytics v.s. 数据分析(Data Analysis)</h3><p>这是两个时常被人混淆的概念，许多管理者喜欢用数据分析来理解Analytics。每每有人用“他是做数据分析的”来介绍我的时，我多半会礼貌的用“我是做运筹分析的”来纠正。当然，Analytics十分依赖数据，但真的不仅仅是数据分析。举一个简单的类比，财会人员每天要用电脑进行财务分析，但不能说他们的工作就是打字；Analytics需要分析数据，但其价值并不仅仅是数据分析。<br>只有将商业、数据、模型、算法、分析、解释，这几个方面综合在一起才能概括Analytics。</p>
+<p>看到这里，相信各位脑海里应该对Analytics有了个大致的印象。总结来说：</p>
+<blockquote>
+<p>运筹分析(Analytics)是一种决策哲学，它有下列特征</p>
+<ul>
+<li>以数据为基础</li>
+<li>针对复杂商业环境和业务逻辑（因素众多，相互关联，以及不确定性）</li>
+<li>依靠数据挖掘和数学建模给出答案</li>
+<li>使用图形化和自动化协助领导者实施决策</li>
+</ul>
+</blockquote>
+<h2 id="企业为什么需要Analytics？"><a href="#企业为什么需要Analytics？" class="headerlink" title="企业为什么需要Analytics？"></a>企业为什么需要Analytics？</h2><p>如前面所说，大数据时代企业每天所产生的数据如滚滚洪流，泥沙俱下。管理者面对海量的数据，虽然深知市场、企业、客户的真相就在其中，但亲身试水无异于跳海自杀。当业务规模不大，决策不复杂的时候，涉水而过或许不成问题。而一旦上了规模，只靠拍脑袋决策，就难了。而这种复杂的业务问题，正是Analytics擅长的领域。</p>
+<p><img style="float: right" src="https://c1.staticflickr.com/3/2558/32326416483_f5fc152042_b.jpg" width="300"></p>
+<p>那么Analytics能解决什么样的问题呢？大致说来可以概括为下面三种基本的分析法：</p>
+<ul>
+<li>解释（Decriptive Analytics）：通过汇总历史数据，使用数据挖掘算法提炼出有价值规律和经验。它能回答”发生了什么？为什么会发生？是什么原因导致的？”。例如：<ul>
+<li>过去销售下滑是什么原因？</li>
+<li>什么样的客户是最赚钱的客户？</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>预测（Predictive Analytics）：通过统计模型和预测算法，预测未来最有可能发生的情况。它能回答“照此发展下去，预计未来会怎样？”。例如：<ul>
+<li>产品未来的销售额怎么变化？</li>
+<li>新的促销活动会有怎样效果？</li>
+</ul>
+</li>
+<li>诊断（Prescribtive Analytics）：使用优化和仿真手段为具体决策提供最优或最合理的解决步骤。他能根据约束条件，提出达到目标的最佳方式。一些典型的问题例如：<ul>
+<li>最优的货运方案是什么？</li>
+<li>如何分配销售人员，使得效率最高？</li>
+<li>新建三个门店最佳选址在哪里？</li>
+<li>广告最优媒体组合和最佳投放频率？</li>
+</ul>
+</li>
+</ul>
+<p>以上的例子是想给大家一个感性的认识。事实上，只要有数据做基础，许多以往不能解决的复杂问题都可以通过Analytics得到更完善的答案</p>
+<h2 id="什么人能从事Analytics？"><a href="#什么人能从事Analytics？" class="headerlink" title="什么人能从事Analytics？"></a>什么人能从事Analytics？</h2><p>如果5年前，某家企业忽然说要向Analytics方向发展，需要组建部门招揽人才。可能人力资源经理会万分头疼，因为仅仅5年前，是没有一所大学开设Business Analytics或者数据科学之类的专业。即便是如今，即便全球很多大学的Analytics和Data Science专业如雨后春笋一般疯狂生长，但真正合格的人才，依旧非常稀缺。</p>
+<p>首先，作为Analytics从业者，最基本的能力是写代码。虽然这个标准近几年有所松动，许多跨领域沟通的能力，项目管理能力被更多的提上重要地位、。但我仍然要说，有坚实代码和算法功底，可以使工作加游刃有余。给出问题以后，能快速上手进行验证，将会给从业者巨大的帮助。熟练掌握基本工具，才能在思考复杂商业逻辑上游刃有余。</p>
+<blockquote>
+<p>文惠君曰：“嘻，善哉！技盖至此乎？”<br>庖丁释刀对曰：”臣之所好者，道也，进乎技矣” – 庄子.养生主</p>
+</blockquote>
+<p>第二种能力是数学知识。Analytics依赖于多种数学工具，因此从业者需要广泛熟悉多种数学方法，了解他们适用的对象，并将理论同商业实际相结合。其实大家每个人都做过类似的事情，解应用题：），只不过Analytics需要解的是更复杂，更实际的应用题。</p>
+<p>第三种能力是数据管理。每一个Analytics从业者不能指望数据整齐的躺在数据库里等着他们去分析。多数时候，数据是残破的，分散的，甚至是不知所踪的。他们必须有能力去寻找，清理并维护数据。熟悉多种数据存储结构，熟悉数据库和ETL应该是最基本的要求。而随着大数据平台的兴起，对Hadoop, noSQL,等新兴数据技术也需要有所涉猎。</p>
+<p>最后一种能力是沟通能力。把这项放在最后说，是因为这往往是决定项目成败的“最终奥义”！再好的戏，没有声音也出不来；再精妙的理论，没有故事的包装，也无法打动人。善于沟通，清晰描述商业价值，可以快速的获得前期信任；在项目实施的过程中，畅通的汇报交流，可以使资源获取更加容易；项目完结，一份潇洒飘逸的报告，美观的PPT和准确的图文表述，那沁人心脾的感觉，将无疑是项目圆满的句号。</p>
+<p>总结说来说</p>
+<blockquote>
+<p>一名合格的Analytics从业者，必须是：战略家+开发者+工程师+创新者+咨询师。</p>
+</blockquote>
+<h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>毫无疑问，当下Analytics已经是一个炙手可热的概念。许多高校中Analytics和Data Science专业如雨后春笋般涌现；许多企业不管三七二十一，都纷纷设立Analytics部门；许多求职者不管合适不合适，都把Data Scientist挂在简历上。因此许多人认为Analytics只是炒机器学习的冷饭，玩的是改头换面的噱头。</p>
+<p>但一次技术革新，需要从理论产生方法，从方法发展应用，从应用到影响观念，从观念改变组织，经历一个完整的过程。即使核心思想一致，但不同的阶段也需要有不同的外延来支撑。</p>
+<p>30年之前，虽然计算机已经大行其道，但IT是什么却无人知晓。而今，我们已经无法想象没有IT部门的企业。 <strong>数据科学的诞生之初叫“统计推断”，应用之后称为“机器学习”，商业化之后叫做“大数据”，现在数据科学要改变企业管理哲学，此时我们给了它一个新名字“Analytics”</strong></p>
+<p><img style="center" src="https://c1.staticflickr.com/4/3864/32779657950_b8610e9e2d_h.jpg" width="500"></p>
+<blockquote>
+<p>10年之后Analytics将彻底改变企业决策的方式，成为企业重要的竞争力源泉。想想现在IT技术对企业发展的巨大影响，未来Analytics必然会引发相同量级的变革。</p>
+</blockquote>
+<p>对于Analytics未来的发展我十分乐观。我也正在为这场为期10年，而且已经开始的变革做准备。你是不是也这么认为呢？或者也在为自己笃定的10年之期，做着准备呢？</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/14/Analytics项目失败的三大原因/" rel="prev" title="Analytics项目失败的三大原因">
+                Analytics项目失败的三大原因 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="分析观" />
+          <p class="site-author-name" itemprop="name">分析观</p>
+           
+              <p class="site-description motion-element" itemprop="description">运筹分析 数据科学 商业分析 知识分享 Analytics Data Science</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Analytics？"><span class="nav-number">1.</span> <span class="nav-text">什么是Analytics？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Analytics-v-s-商业分析-Business-Analysis"><span class="nav-number">1.1.</span> <span class="nav-text">Analytics v.s. 商业分析(Business Analysis)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analytics-v-s-数据分析-Data-Analysis"><span class="nav-number">1.2.</span> <span class="nav-text">Analytics v.s. 数据分析(Data Analysis)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#企业为什么需要Analytics？"><span class="nav-number">2.</span> <span class="nav-text">企业为什么需要Analytics？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么人能从事Analytics？"><span class="nav-number">3.</span> <span class="nav-text">什么人能从事Analytics？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未来"><span class="nav-number">4.</span> <span class="nav-text">未来</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">分析观</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'analyticsme';
+      var disqus_identifier = '2017/02/23/分析观上线了/';
+
+      var disqus_title = "分析观上线! 开篇聊聊什么是Analytics";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
