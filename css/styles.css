@@ -1,0 +1,32 @@
+/* 
+    Document   : styles
+    Created on : Aug 26, 2013, 10:21:57 AM
+    Author     : edward.wang
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.ui-widget {
+   font-size: 14px !important;
+}
+
+.reqTable{   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.reqTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.reqTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.reqTableEvenRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
