@@ -2,7 +2,7 @@
 title: Analytics项目失败的三大原因
 date: 2017-03-14 22:10:16
 author: Yan
-tags:
+tags: 'project management'
 ---
 <img align="middle" src="https://c1.staticflickr.com/1/718/33257311126_195108a3a3.jpg" width="400">
 
