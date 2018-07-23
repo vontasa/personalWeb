@@ -75,3 +75,11 @@ deploy:
   type: git
   repo: https://github.com/vontasa/vontasa.github.io.git
   branch: master
+
+# Markdown Math formula support (install hexo-math first)
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    # src: custom_mathjax_source
+    config:
+      # MathJax config
