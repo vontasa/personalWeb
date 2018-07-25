@@ -285,6 +285,10 @@ mathjax:
 #duoshuo_shortname:
 
 # Disqus
+disqus:
+  enable: true
+  shortname: analyticsme
+  count: true
 disqus_shortname: analyticsme
 
 # Hypercomments

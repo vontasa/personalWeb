@@ -45,6 +45,10 @@ highlight:
   tab_replace:
 
 # Disqus
+disqus:
+  enable: true
+  shortname: analyticsme
+  count: true
 disqus_shortname: analyticsme
 
 # Category & Tag
