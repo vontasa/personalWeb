@@ -87,15 +87,21 @@
 
 
 
-<meta name="description" content="运筹分析 数据科学 商业分析 知识分享 Analytics Data Science">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分析观">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="这是一个号称Google官方的开源优化sdk， 包括建模框架，CP求解器，支持市面上主流求解器，同时自带部分算法。 该sdk目前最大的风险是只有一个人在维护。作者Laurent Perron是Google Paris的员工，而之前11年则一直在ILOG工作，2008年离职！ 要知道2008年IBM收购了ILOG，立时引得精英大佬成批出逃。一部分不甘认输，于是另起炉灶，短短几年就让Gurobi便声">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google OR Tool解TSP.md">
+<meta property="og:url" content="http://yoursite.com/2018/08/18/Googl-OR解路径规划/index.html">
 <meta property="og:site_name" content="分析观">
-<meta property="og:description" content="运筹分析 数据科学 商业分析 知识分享 Analytics Data Science">
+<meta property="og:description" content="这是一个号称Google官方的开源优化sdk， 包括建模框架，CP求解器，支持市面上主流求解器，同时自带部分算法。 该sdk目前最大的风险是只有一个人在维护。作者Laurent Perron是Google Paris的员工，而之前11年则一直在ILOG工作，2008年离职！ 要知道2008年IBM收购了ILOG，立时引得精英大佬成批出逃。一部分不甘认输，于是另起炉灶，短短几年就让Gurobi便声">
+<meta property="og:image" content="https://farm2.staticflickr.com/1891/44065518432_43591109cc_b.jpg">
+<meta property="og:image" content="https://farm2.staticflickr.com/1858/43207487075_5c8b01c061_b.jpg">
+<meta property="og:image" content="https://farm2.staticflickr.com/1815/30255492068_1db8432c7a_b.jpg">
+<meta property="og:image" content="https://public.tableau.com/static/images/VR/VRPDemo/VRPtest/1_rss.png">
+<meta property="og:updated_time" content="2018-08-19T04:16:20.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分析观">
-<meta name="twitter:description" content="运筹分析 数据科学 商业分析 知识分享 Analytics Data Science">
+<meta name="twitter:title" content="Google OR Tool解TSP.md">
+<meta name="twitter:description" content="这是一个号称Google官方的开源优化sdk， 包括建模框架，CP求解器，支持市面上主流求解器，同时自带部分算法。 该sdk目前最大的风险是只有一个人在维护。作者Laurent Perron是Google Paris的员工，而之前11年则一直在ILOG工作，2008年离职！ 要知道2008年IBM收购了ILOG，立时引得精英大佬成批出逃。一部分不甘认输，于是另起炉灶，短短几年就让Gurobi便声">
+<meta name="twitter:image" content="https://farm2.staticflickr.com/1891/44065518432_43591109cc_b.jpg">
 
 
 
@@ -123,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/18/Googl-OR解路径规划/"/>
 
 
 
 
 
-  <title> 分析观 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Google OR Tool解TSP.md | 分析观 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,9 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,9 +262,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -290,10 +294,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2018/08/18/Googl-OR解路径规划/" itemprop="url">
-                  Google OR Tool解TSP.md
-                </a>
+                Google OR Tool解TSP.md
               
             
           </h1>
@@ -355,9 +356,7 @@
       
 
       
-        
-          
-            <p><img src="https://farm2.staticflickr.com/1891/44065518432_43591109cc_b.jpg" width="400"></p>
+        <p><img src="https://farm2.staticflickr.com/1891/44065518432_43591109cc_b.jpg" width="400"></p>
 <p>这是一个号称Google官方的开源优化sdk， 包括建模框架，CP求解器，支持市面上主流求解器，同时自带部分算法。 该sdk目前最大的风险是只有一个人在维护。作者<a href="https://www.linkedin.com/in/laurentperron/" target="_blank" rel="external">Laurent Perron</a>是Google Paris的员工，而之前11年则一直在ILOG工作，2008年离职！ 要知道2008年IBM收购了ILOG，立时引得精英大佬成批出逃。一部分不甘认输，于是另起炉灶，短短几年就让Gurobi便声名鹊起，现在已经稳压IBM CPLEX一头。 而这位大哥选择投奔Google，仅凭一人之力，就弄出了这套sdk。 当年ILOG恐怖的技术实力可见一斑。</p>
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>该套件包括以下内容</p>
 <ul>
@@ -439,20 +438,27 @@
 <p><img src="https://farm2.staticflickr.com/1815/30255492068_1db8432c7a_b.jpg" width="600"></p>
 <p><div class="tableauPlaceholder" id="viz1534650494185" style="position: relative"><noscript><a href="#"><img alt="VRP test " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;VR&#47;VRPDemo&#47;VRPtest&#47;1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"> <param name="embed_code_version" value="3"> <param name="site_root" value=""><param name="name" value="VRPDemo&#47;VRPtest"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;VR&#47;VRPDemo&#47;VRPtest&#47;1.png"> <param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"></object></div>                <script type="text/javascript">                    var divElement = document.getElementById(‘viz1534650494185’);                    var vizElement = divElement.getElementsByTagName(‘object’)[0];                    vizElement.style.width=’100%’;vizElement.style.height=(divElement.offsetWidth*0.75)+’px’;                    var scriptElement = document.createElement(‘script’);                    scriptElement.src = ‘<a href="https://public.tableau.com/javascripts/api/viz_v1.js">https://public.tableau.com/javascripts/api/viz_v1.js</a>‘;                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""Vehicle Routing Problem"""</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</div><div class="line"><span class="keyword">from</span> six.moves <span class="keyword">import</span> xrange</div><div class="line"><span class="comment"># or-tool CP solver</span></div><div class="line"><span class="keyword">from</span> ortools.constraint_solver <span class="keyword">import</span> pywrapcp</div><div class="line"><span class="keyword">from</span> ortools.constraint_solver <span class="keyword">import</span> routing_enums_pb2</div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sin, cos, sqrt, atan2, radians</div><div class="line"><span class="keyword">import</span> plotly</div><div class="line"><span class="keyword">import</span> googlemaps</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment">###########################</span></div><div class="line"><span class="comment"># Example of a delivery problem</span></div><div class="line"><span class="comment">###########################</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataProblem2</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""Stores the data for the problem"""</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""Initializes the data for the problem"""</span></div><div class="line">        self._num_vehicles = <span class="number">10</span></div><div class="line"></div><div class="line">        <span class="comment"># read nodes and depots</span></div><div class="line">        df_nodes = pd.read_csv(<span class="string">'data/deliveries.csv'</span>,sep=<span class="string">'\s+'</span>)</div><div class="line">        df_depots = pd.read_csv(<span class="string">'data/stores.csv'</span>,sep=<span class="string">'\s+'</span>)</div><div class="line"></div><div class="line">        <span class="comment"># get lat lon info as list</span></div><div class="line">        nodes_latlon = df_nodes[[<span class="string">'latitude'</span>, <span class="string">'longitude'</span>]]</div><div class="line">        depots_latlon = df_depots[[<span class="string">'latitude'</span>, <span class="string">'longitude'</span>]]</div><div class="line"></div><div class="line">        <span class="comment"># creat tuple list of lat lon</span></div><div class="line">        locations = [tuple(x) <span class="keyword">for</span> x <span class="keyword">in</span> nodes_latlon.values]</div><div class="line">        locations = [(tuple(depots_latlon.values[<span class="number">0</span>]))]+locations</div><div class="line"></div><div class="line">        <span class="comment"># locations in meters using the city block dimension</span></div><div class="line">        self._locations = [(loc[<span class="number">0</span>],loc[<span class="number">1</span>]) <span class="keyword">for</span> loc <span class="keyword">in</span> locations]</div><div class="line">        </div><div class="line">        <span class="comment"># Index of depot</span></div><div class="line">        self._depot = <span class="number">0</span></div><div class="line">        </div><div class="line">        <span class="comment"># Demand per location</span></div><div class="line">        self._demands = [<span class="number">1</span>]*len(locations)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#######################</span></div><div class="line"><span class="comment"># Problem Constraints #</span></div><div class="line"><span class="comment">#######################</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">manhattan_distance</span><span class="params">(position_1, position_2)</span>:</span></div><div class="line">    <span class="string">"""Computes the Manhattan distance between two points"""</span></div><div class="line">    <span class="keyword">return</span> (abs(position_1[<span class="number">0</span>] - position_2[<span class="number">0</span>]) +</div><div class="line">            abs(position_1[<span class="number">1</span>] - position_2[<span class="number">1</span>]))</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">haversine_distance</span><span class="params">(position_1, position_2)</span>:</span></div><div class="line">    <span class="string">"""Computes the geographical distance between two points"""</span></div><div class="line">    <span class="comment"># approximate radius of earth in km</span></div><div class="line">    R = <span class="number">6373.0</span></div><div class="line"></div><div class="line">    lat1 = radians(position_1[<span class="number">0</span>])</div><div class="line">    lon1 = radians(position_1[<span class="number">1</span>])</div><div class="line">    lat2 = radians(position_2[<span class="number">0</span>])</div><div class="line">    lon2 = radians(position_2[<span class="number">1</span>])</div><div class="line"></div><div class="line">    dlon = lon2 - lon1</div><div class="line">    dlat = lat2 - lat1</div><div class="line"></div><div class="line">    a = sin(dlat / <span class="number">2</span>)**<span class="number">2</span> + cos(lat1) * cos(lat2) * sin(dlon / <span class="number">2</span>)**<span class="number">2</span></div><div class="line">    c = <span class="number">2</span> * atan2(sqrt(a), sqrt(<span class="number">1</span> - a))</div><div class="line"></div><div class="line">    distance = R * c</div><div class="line">    <span class="keyword">return</span>(distance)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CreateDistanceEvaluator</span><span class="params">(object)</span>:</span> <span class="comment"># pylint: disable=too-few-public-methods</span></div><div class="line">    <span class="string">"""Creates callback to return distance between points."""</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, data)</span>:</span></div><div class="line">        <span class="string">"""Initializes the distance matrix."""</span></div><div class="line">        self._distances = &#123;&#125;</div><div class="line"></div><div class="line">        <span class="comment"># precompute distance between location to have distance callback in O(1)</span></div><div class="line">        <span class="keyword">for</span> from_node <span class="keyword">in</span> xrange(data.num_locations):</div><div class="line">            self._distances[from_node] = &#123;&#125;</div><div class="line">            <span class="keyword">for</span> to_node <span class="keyword">in</span> xrange(data.num_locations):</div><div class="line">                <span class="keyword">if</span> from_node == to_node:</div><div class="line">                    self._distances[from_node][to_node] = <span class="number">0</span></div><div class="line">                <span class="keyword">else</span>:</div><div class="line">                    self._distances[from_node][to_node] =(</div><div class="line">                        haversine_distance(data.locations[from_node],</div><div class="line">                                           data.locations[to_node]))</div><div class="line">                                                           </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">distance_evaluator</span><span class="params">(self, from_node, to_node)</span>:</span></div><div class="line">        <span class="string">"""Returns the manhattan distance between the two nodes"""</span></div><div class="line">        <span class="keyword">return</span> self._distances[from_node][to_node]</div><div class="line">    </div><div class="line">    </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CreateDemandEvaluator</span><span class="params">(object)</span>:</span> <span class="comment"># pylint: disable=too-few-public-methods</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,data)</span>:</span></div><div class="line">        <span class="string">"""Initializes the demand list"""</span></div><div class="line">        self._demands = data.demands</div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">demand_evaluator</span><span class="params">(self, from_node, to_node)</span>:</span></div><div class="line">        <span class="string">"""Returns the demand for a node"""</span></div><div class="line">        <span class="keyword">return</span> self._demands[from_node]</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_distance_dimension</span><span class="params">(routing, distance_evaluator)</span>:</span></div><div class="line">    <span class="string">"""Add Global Span constraint"""</span></div><div class="line">    distance = <span class="string">"Distance"</span></div><div class="line">    maximum_distance = <span class="number">50</span></div><div class="line">    routing.AddDimension(</div><div class="line">        distance_evaluator,</div><div class="line">        <span class="number">0</span>, <span class="comment"># null slack</span></div><div class="line">        maximum_distance, <span class="comment"># maximum distance per vehicle</span></div><div class="line">        <span class="keyword">True</span>, <span class="comment"># start cumul to zero</span></div><div class="line">        distance)</div><div class="line">    <span class="comment"># get the dimension by name</span></div><div class="line">    distance_dimension = routing.GetDimensionOrDie(distance)</div><div class="line">    <span class="comment"># Try to minimize the max distance among vehicles.</span></div><div class="line">    <span class="comment"># /!\ It doesn't mean the standard deviation is minimized</span></div><div class="line">    distance_dimension.SetGlobalSpanCostCoefficient(<span class="number">100</span>)</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_demand_dimension</span><span class="params">(routing, demand_evaluator)</span>:</span></div><div class="line">    <span class="string">"""Add a global capcity for each route"""</span></div><div class="line">    capacity = <span class="string">"Capacity"</span></div><div class="line">    routing.AddDimension(</div><div class="line">        demand_evaluator,</div><div class="line">        <span class="number">0</span>,</div><div class="line">        <span class="number">35</span>,</div><div class="line">        <span class="keyword">True</span>,</div><div class="line">        capacity)</div><div class="line"></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment"># Printer #</span></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConsolePrinter</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""Print solution to console"""</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, data, routing, assignment)</span>:</span></div><div class="line">        <span class="string">"""Initializes the printer"""</span></div><div class="line">        self._data = data</div><div class="line">        self._routing = routing</div><div class="line">        self._assignment = assignment</div><div class="line">        self._stop = []</div><div class="line">        self._route_num = []</div><div class="line">        self._node_index = []</div><div class="line"></div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">data</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""Gets problem data"""</span></div><div class="line">        <span class="keyword">return</span> self._data</div><div class="line"></div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">routing</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""Gets routing model"""</span></div><div class="line">        <span class="keyword">return</span> self._routing</div><div class="line"></div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">assignment</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""Gets routing model"""</span></div><div class="line">        <span class="keyword">return</span> self._assignment</div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">stop</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self._stop</div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">route</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self._route_num</div><div class="line"></div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">node</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self._node_index</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""Prints assignment on console"""</span></div><div class="line">        <span class="comment"># Inspect solution.</span></div><div class="line">        total_dist = <span class="number">0</span></div><div class="line"></div><div class="line">        <span class="keyword">for</span> vehicle_id <span class="keyword">in</span> xrange(self.data.num_vehicles):</div><div class="line">            index = self.routing.Start(vehicle_id)</div><div class="line">            plan_output = <span class="string">'Route for vehicle &#123;0&#125;:\n'</span>.format(vehicle_id)</div><div class="line">            route_dist = <span class="number">0</span></div><div class="line">            route_load = <span class="number">0</span></div><div class="line">            route = []</div><div class="line">            <span class="keyword">while</span> <span class="keyword">not</span> self.routing.IsEnd(index):</div><div class="line">                node_index = self.routing.IndexToNode(index)</div><div class="line">                next_node_index = self.routing.IndexToNode(</div><div class="line">                    self.assignment.Value(self.routing.NextVar(index)))</div><div class="line">                <span class="comment"># Assign route number</span></div><div class="line">                self._route_num.append(vehicle_id)</div><div class="line">                <span class="comment"># Assign stop number in a route</span></div><div class="line">                self._stop.append(len(route))</div><div class="line">                <span class="comment"># Assign node index</span></div><div class="line">                self._node_index.append(node_index)</div><div class="line">                <span class="comment"># Append node to route</span></div><div class="line">                route.append(node_index)</div><div class="line">                </div><div class="line">                route_dist += haversine_distance(</div><div class="line">                    self.data.locations[node_index],</div><div class="line">                    self.data.locations[next_node_index])</div><div class="line">                route_load += self.data.demands[node_index]</div><div class="line">                </div><div class="line">                plan_output += <span class="string">' &#123;node_index&#125;(&#123;cuml_load&#125;) -&gt; '</span>.format(</div><div class="line">                    node_index=node_index, cuml_load=route_load)</div><div class="line">                index = self.assignment.Value(self.routing.NextVar(index))</div><div class="line"></div><div class="line">            node_index = self.routing.IndexToNode(index)</div><div class="line">            total_dist += route_dist</div><div class="line">            plan_output += <span class="string">' &#123;node_index&#125;\n'</span>.format(</div><div class="line">                node_index=node_index)</div><div class="line">            plan_output += <span class="string">'Distance of the route &#123;0&#125;: &#123;dist&#125;\n'</span>.format(</div><div class="line">                vehicle_id,</div><div class="line">                dist=route_dist)</div><div class="line">            plan_output += <span class="string">'Load of the route: &#123;0&#125;\n'</span>.format(route_load)</div><div class="line"></div><div class="line">            print(plan_output)</div><div class="line">        print(<span class="string">'Total Distance of all routes: &#123;dist&#125;'</span>.format(dist=total_dist))</div><div class="line"></div><div class="line"><span class="comment">########</span></div><div class="line"><span class="comment"># Main #</span></div><div class="line"><span class="comment">########</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""Entry point of the program"""</span></div><div class="line">    <span class="comment"># Instantiate the data problem.</span></div><div class="line">    data = DataProblem2()</div><div class="line"></div><div class="line">    <span class="comment"># Create Routing Model</span></div><div class="line">    routing = pywrapcp.RoutingModel(data.num_locations, data.num_vehicles, data.depot)</div><div class="line">    <span class="comment"># Define weight of each edge</span></div><div class="line">    distance_evaluator = CreateDistanceEvaluator(data).distance_evaluator</div><div class="line">    demand_evaluator = CreateDemandEvaluator(data).demand_evaluator</div><div class="line">    </div><div class="line">    routing.SetArcCostEvaluatorOfAllVehicles(distance_evaluator)</div><div class="line">    add_distance_dimension(routing, distance_evaluator)</div><div class="line">    add_demand_dimension(routing, demand_evaluator)</div><div class="line"></div><div class="line">    <span class="comment"># Setting first solution heuristic (cheapest addition).</span></div><div class="line">    search_parameters = pywrapcp.RoutingModel.DefaultSearchParameters()</div><div class="line">    search_parameters.first_solution_strategy = (</div><div class="line">        routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)</div><div class="line">    <span class="comment"># Solve the problem.</span></div><div class="line">    assignment = routing.SolveWithParameters(search_parameters)</div><div class="line">    printer = ConsolePrinter(data, routing, assignment)</div><div class="line">    printer.print()</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">  main()</div></pre></td></tr></table></figure>
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -460,576 +466,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/22/Pyomo开源优化建模解决方案/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="分析观">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="分析观">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/22/Pyomo开源优化建模解决方案/" rel="next" title="自己动手丰衣足食：Pyomo开源优化建模解决方案">
+                <i class="fa fa-chevron-left"></i> 自己动手丰衣足食：Pyomo开源优化建模解决方案
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2018/07/22/Pyomo开源优化建模解决方案/" itemprop="url">
-                  自己动手丰衣足食：Pyomo开源优化建模解决方案
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T23:49:53-04:00">
-                2018-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/22/Pyomo开源优化建模解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/22/Pyomo开源优化建模解决方案/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><img  src="https://farm1.staticflickr.com/932/43581388701_349b9aebd5.jpg" width="400"><br>搞运筹优化，离不开建模和求解。市面上主流的优化平台如cplex和gurobi对于各种优化问题都有极佳的表现。但缺点也十分明显，那就是贵！ 早先Gurobi在同IBM cplex竞争的时候，价格十分低廉，但随着Gurobi慢慢证明了自己一哥的地位之后，定价策略也就不那么亲民了。颇有屠龙勇士变成恶龙的感觉。<br><br>经费在燃烧，老板在咆哮，对于初创团队和小型项目，模型一般不大，有没有便宜又可靠的优化解决方案呢？ 有的，我们自己动手丰衣足食，可以完全用开源工具高效的工作！ 这就是今天要介绍的<strong>pyomo + GLPK/ipopt</strong>.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/22/Pyomo开源优化建模解决方案/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/2017运筹学会商业分析年会日记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="分析观">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="分析观">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/08/2017运筹学会商业分析年会日记/" itemprop="url">
-                  2017运筹学会商业分析年会日记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T00:24:04-04:00">
-                2017-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/08/2017运筹学会商业分析年会日记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/08/2017运筹学会商业分析年会日记/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://c1.staticflickr.com/3/2813/33528594684_965e79b21c.jpg" width="400"></p>
-<p>今年4月初，INFORMS 商业分析年会 (Business Aanalytics)在美国赌城拉斯维加斯召开。在三天的时间里，听了不少有意思的报告，也感受到了许多令人激动的趋势。几天下来，不知不觉积累了好多笔记。趁着记忆犹新，整理一下笔记和心得，希望尽量能从门票钱里再抠出一点价值。同时，对于不了解或者没机会参加今年INFORMS B&amp;A 的朋友也能对今年的会议有个大致的了解。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/08/2017运筹学会商业分析年会日记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/Analytics项目失败的三大原因/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="分析观">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="分析观">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/14/Analytics项目失败的三大原因/" itemprop="url">
-                  Analytics项目失败的三大原因
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T22:10:16-04:00">
-                2017-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/14/Analytics项目失败的三大原因/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/14/Analytics项目失败的三大原因/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img align="middle" src="https://c1.staticflickr.com/1/718/33257311126_195108a3a3.jpg" width="400"></p>
-<p>胜败乃兵家常事。不论是一线的数据科学家，还是业务负责人，多少都会遇到失败的项目。开头一片光明，看似机会无限。简单估算一下，哇塞，一年可以直接/间接创造百万元的效益。于是雄心勃勃开场，但做着做着却发现势头不对，随后不知为什么就慢性搁浅了。这样的体验，相信很多人都有。项目失败固然令人沮丧，酸甜苦辣也不尽相同，但总归也还是有些规律可寻。</p>
-<blockquote>
-<p>是故胜兵先胜而后求战，败兵先战而后求胜。 –孙武</p>
-</blockquote>
-<p>孙子兵法这句话，很是精妙。在当下的语境中，应该说的是这样一个意思：成功的项目，多半是积累了成功条件方才开始，而失败的项目往往是开始之后才发现忽视了关键的因素。那到底有哪些因素会导致项目的失败呢？</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/14/Analytics项目失败的三大原因/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/23/分析观上线了/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="分析观">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="分析观">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/23/分析观上线了/" itemprop="url">
-                  分析观上线! 开篇聊聊什么是Analytics
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-23T01:27:42-05:00">
-                2017-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/23/分析观上线了/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/02/23/分析观上线了/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>欢迎来到”分析观”, 一个交流运筹分析(Analytics)知识的平台。</p>
-<p>Analytics是一个新兴领域，甚至还没有一个贴切的中文翻译，我暂且称它为“运筹分析”。但提起她的内涵却并不会让人感到陌生。概括说来，它是运用<strong>商业分析</strong>+<strong>数据科学</strong>+<strong>数学建模</strong>+<strong>数据可视化</strong>为企业提供决策支持。解决的核心问题就一句话：</p>
-<blockquote>
-<p>怎么做正确的商业决策？</p>
-</blockquote>
-<p>毫不夸张的说，及早在Analytics领域进行战略布局，已经成为未来企业的核心竞争力。未来十年，胜负将决于此间！<br>作为开门第一篇文章，和大家聊聊Analytics的前世今生，应该是再合适不过了。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/23/分析观上线了/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -1037,6 +505,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -1056,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -1110,6 +598,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number"></span> <span class="nav-text">案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模型"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立数据对象"><span class="nav-number">2.</span> <span class="nav-text">建立数据对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#距离"><span class="nav-number">3.</span> <span class="nav-text">距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Haversine距离计算函数"><span class="nav-number">4.</span> <span class="nav-text">Haversine距离计算函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义约束1-距离约束"><span class="nav-number">5.</span> <span class="nav-text">定义约束1 - 距离约束</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义约束2-容量约束"><span class="nav-number">6.</span> <span class="nav-text">定义约束2 - 容量约束</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主函数"><span class="nav-number">7.</span> <span class="nav-text">主函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果"><span class="nav-number">8.</span> <span class="nav-text">结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number"></span> <span class="nav-text">源码</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1217,6 +721,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -1234,6 +742,18 @@
       <script id="dsq-count-scr" src="https://analyticsme.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/08/18/Googl-OR解路径规划/';
+          this.page.identifier = '2018/08/18/Googl-OR解路径规划/';
+          this.page.title = 'Google OR Tool解TSP.md';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://analyticsme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
